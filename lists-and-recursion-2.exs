@@ -1,4 +1,4 @@
 defmodule MyList do
-  def max(list) do: _max(list, current_max)
-
+  def max([x]), do: x
+  def max([head|tail]), do: Kernel.max(head, MyList.max(tail))
 end
